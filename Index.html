@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Ulang Tahun Romantis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffeaf0 0%, #f0f9ff 100%);
+            color: #5a5a72;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #e88c9a;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a9a9c5;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .message-section {
+            flex: 2;
+            min-width: 300px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .message-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #e88c9a, #a9d8e6, #c9a9e8);
+        }
+        
+        .decoration {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .birthday-icon {
+            font-size: 8rem;
+            color: #e88c9a;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 5px 10px rgba(232, 140, 154, 0.2));
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .cute-element {
+            width: 200px;
+            height: 200px;
+            background-color: #f8d7e6;
+            border-radius: 50%;
+            position: relative;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cute-element::before, .cute-element::after {
+            content: "";
+            position: absolute;
+            background-color: #f8d7e6;
+            border-radius: 50%;
+        }
+        
+        .cute-element::before {
+            width: 80px;
+            height: 80px;
+            top: -30px;
+            left: 30px;
+        }
+        
+        .cute-element::after {
+            width: 60px;
+            height: 60px;
+            top: -20px;
+            right: 40px;
+        }
+        
+        .cute-element i {
+            font-size: 5rem;
+            color: #e88c9a;
+            z-index: 2;
+        }
+        
+        .message-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: #a9d8e6;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .message-text {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px dashed #e0e0f0;
+            text-align: justify;
+        }
+        
+        .highlight {
+            color: #e88c9a;
+            font-weight: 500;
+        }
+        
+        .wish-list {
+            list-style-type: none;
+            margin-top: 20px;
+        }
+        
+        .wish-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .wish-list li::before {
+            content: "❤";
+            color: #e88c9a;
+            position: absolute;
+            left: 0;
+        }
+        
+        .footer-note {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #a9a9c5;
+            font-size: 1rem;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #c9a9e8;
+            text-align: right;
+            margin-top: 30px;
+        }
+        
+        .interactive-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .love-btn {
+            background-color: #e88c9a;
+            color: white;
+            box-shadow: 0 5px 15px rgba(232, 140, 154, 0.3);
+        }
+        
+        .love-btn:hover {
+            background-color: #d87a89;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(232, 140, 154, 0.4);
+        }
+        
+        .wish-btn {
+            background-color: #a9d8e6;
+            color: white;
+            box-shadow: 0 5px 15px rgba(169, 216, 230, 0.3);
+        }
+        
+        .wish-btn:hover {
+            background-color: #97c6d4;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(169, 216, 230, 0.4);
+        }
+        
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 1.5rem;
+            color: rgba(232, 140, 154, 0.4);
+            animation: fall 10s linear infinite;
+        }
+        
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .decoration {
+                order: -1;
+            }
+            
+            .birthday-icon {
+                font-size: 6rem;
+            }
+        }
+        
+        .love-counter {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #e88c9a;
+        }
+        
+        .counter-number {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Selamat Ulang Tahun Sayang!</h1>
+            <p class="subtitle">Hari spesial untuk seseorang yang sangat berarti</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="message-section">
+                <h2 class="message-title">Untuk Cewek Tercantik di Hidupku</h2>
+                
+                <div class="message-text">
+                    <p>Di hari yang spesial ini, aku ingin mengucapkan <span class="highlight">Selamat Ulang Tahun</span> untukmu, cintaku. Semoga hari ini penuh dengan kebahagiaan, tawa, dan semua hal indah yang kau pantas dapatkan.</p>
+                    
+                    <p>Terima kasih telah menjadi bagian terindah dalam hidupku. Setiap momen bersamamu adalah anugerah yang selalu kusyukuri. Semoga tahun ini membawa lebih banyak kebahagiaan, kesuksesan, dan petualangan indah untuk kita jalani bersama.</p>
+                    
+                    <p>Aku bersyukur setiap hari karena memiliki seseorang sepertimu. Cantik, baik, dan penuh kasih sayang. Kau membuat hidupku lebih berwarna dan bermakna.</p>
+                </div>
+                
+                <h3 class="message-title">Harapanku untukmu di hari spesial ini:</h3>
+                
+                <ul class="wish-list">
+                    <li>Semoga kau selalu dikelilingi oleh orang-orang yang mencintaimu</li>
+                    <li>Semoga kesehatan dan kebahagiaan selalu menyertaimu</li>
+                    <li>Semoga semua impian dan cita-citamu terwujud</li>
+                    <li>Semoga kita selalu bersama melewati setiap momen berharga</li>
+                    <li>Semoga senyumanmu selalu menghiasi hari-harimu</li>
+                </ul>
+                
+                <div class="footer-note">
+                    <p>Teruslah bersinar seperti biasanya. Dunia lebih indah dengan kehadiranmu.</p>
+                </div>
+                
+                <div class="signature">Dengan cinta,<br>Dari seseorang yang sangat menyayangimu</div>
+            </div>
+            
+            <div class="decoration">
+                <div class="cute-element">
+                    <i class="fas fa-birthday-cake"></i>
+                </div>
+                
+                <div class="birthday-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                
+                <div class="love-counter">
+                    <p><span id="clickCount" class="counter-number">0</span> kali cinta dikirimkan</p>
+                </div>
+                
+                <div class="interactive-section">
+                    <button class="btn love-btn" id="loveBtn">
+                        <i class="fas fa-heart"></i> Kirim Cinta
+                    </button>
+                    <button class="btn wish-btn" id="wishBtn">
+                        <i class="fas fa-star"></i> Kirim Harapan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Membuat efek hati jatuh
+        function createHearts() {
+            const heartsContainer = document.getElementById('heartsContainer');
+            const heartCount = 15;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤';
+                
+                // Posisi acak
+                const leftPos = Math.random() * 100;
+                const animationDuration = 10 + Math.random() * 10;
+                const fontSize = 15 + Math.random() * 20;
+                const opacity = 0.3 + Math.random() * 0.4;
+                
+                heart.style.left = `${leftPos}vw`;
+                heart.style.animationDuration = `${animationDuration}s`;
+                heart.style.fontSize = `${fontSize}px`;
+                heart.style.opacity = opacity;
+                heart.style.animationDelay = `${Math.random() * 10}s`;
+                
+                heartsContainer.appendChild(heart);
+            }
+        }
+        
+        // Interaksi tombol
+        let clickCount = 0;
+        
+        document.getElementById('loveBtn').addEventListener('click', function() {
+            clickCount++;
+            document.getElementById('clickCount').textContent = clickCount;
+            
+            // Membuat efek hati sementara
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤';
+            heart.style.position = 'fixed';
+            heart.style.fontSize = '30px';
+            heart.style.color = '#e88c9a';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '1000';
+            
+            // Posisi acak di sekitar tombol
+            const btnRect = this.getBoundingClientRect();
+            const x = btnRect.left + Math.random() * btnRect.width;
+            const y = btnRect.top + Math.random() * btnRect.height;
+            
+            heart.style.left = `${x}px`;
+            heart.style.top = `${y}px`;
+            
+            document.body.appendChild(heart);
+            
+            // Animasi hati naik dan menghilang
+            let posY = y;
+            let opacity = 1;
+            
+            const animateHeart = setInterval(() => {
+                posY -= 2;
+                opacity -= 0.02;
+                
+                heart.style.top = `${posY}px`;
+                heart.style.opacity = opacity;
+                
+                if (opacity <= 0) {
+                    clearInterval(animateHeart);
+                    heart.remove();
+                }
+            }, 30);
+            
+            // Efek suara (jika diizinkan browser)
+            playClickSound();
+            
+            // Ganti teks tombol sesaat
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-heart"></i> Cinta Terkirim!';
+            this.style.backgroundColor = '#d87a89';
+            
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.style.backgroundColor = '';
+            }, 800);
+        });
+        
+        document.getElementById('wishBtn').addEventListener('click', function() {
+            // Membuat efek bintang
+            const star = document.createElement('div');
+            star.innerHTML = '✨';
+            star.style.position = 'fixed';
+            star.style.fontSize = '25px';
+            star.style.pointerEvents = 'none';
+            star.style.zIndex = '1000';
+            
+            // Posisi acak di sekitar tombol
+            const btnRect = this.getBoundingClientRect();
+            const x = btnRect.left + Math.random() * btnRect.width;
+            const y = btnRect.top + Math.random() * btnRect.height;
+            
+            star.style.left = `${x}px`;
+            star.style.top = `${y}px`;
+            
+            document.body.appendChild(star);
+            
+            // Animasi bintang
+            let scale = 1;
+            let opacity = 1;
+            
+            const animateStar = setInterval(() => {
+                scale += 0.05;
+                opacity -= 0.03;
+                
+                star.style.transform = `scale(${scale})`;
+                star.style.opacity = opacity;
+                
+                if (opacity <= 0) {
+                    clearInterval(animateStar);
+                    star.remove();
+                }
+            }, 30);
+            
+            // Efek suara (jika diizinkan browser)
+            playClickSound();
+            
+            // Pesan harapan
+            const messages = [
+                "Semoga harimu penuh kebahagiaan!",
+                "Semoga semua impianmu terkabul!",
+                "Kau adalah anugerah terindah!",
+                "Teruslah bersinar, sayang!",
+                "Dunia lebih indah dengan kehadiranmu!"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            
+            // Ganti teks tombol sesaat
+            const originalText = this.innerHTML;
+            this.innerHTML = `<i class="fas fa-star"></i> ${randomMessage}`;
+            this.style.backgroundColor = '#97c6d4';
+            
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.style.backgroundColor = '';
+            }, 1500);
+        });
+        
+        // Fungsi untuk memutar suara klik (sederhana)
+        function playClickSound() {
+            try {
+                // Membuat konteks audio web yang sederhana
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = 523.25; // Nada C5
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.2);
+            } catch (e) {
+                // Jika ada masalah dengan audio, abaikan saja
+                console.log("Audio tidak didukung di browser ini");
+            }
+        }
+        
+        // Inisialisasi
+        window.onload = function() {
+            createHearts();
+            
+            // Tambahkan beberapa hati saat pertama kali dimuat
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    document.getElementById('loveBtn').click();
+                }, i * 300);
+            }
+        };
+    </script>
+</body>
+</html>
