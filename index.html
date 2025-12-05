@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday, Sayang ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #fff9fb;
+      --p1: #ffd7e9; /* pastel pink */
+      --p2: #fff0e1; /* pastel peach */
+      --p3: #e9e1ff; /* pastel lavender */
+      --accent: #ffd1e6;
+      --muted: #9b8aa6;
+      --card-shadow: 0 8px 24px rgba(95,60,97,0.06);
+      --radius: 18px;
+      --soft: cubic-bezier(.22,.9,.37,1);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg), #fffafc);
+      color:#38273a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+
+    .container{
+      width:100%;
+      max-width:920px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.95));
+      border-radius:28px;
+      padding:28px;
+      box-shadow:var(--card-shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* floating pastel blobs */
+    .blob{position:absolute;border-radius:50%;filter:blur(18px);opacity:0.8}
+    .b1{width:260px;height:260px;background:var(--p1);left:-80px;top:-40px}
+    .b2{width:200px;height:200px;background:var(--p2);right:-60px;top:-20px}
+    .b3{width:160px;height:160px;background:var(--p3);left:30%;top:60%}
+
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{
+      width:120px;height:120px;border-radius:20px;background:linear-gradient(135deg,var(--p1),var(--p2));
+      display:flex;align-items:center;justify-content:center;font-size:44px;color:#6a3a5a;box-shadow:0 8px 30px rgba(102,55,80,0.08);
+    }
+    .title{
+      flex:1
+    }
+    h1{margin:0;font-family: 'Pacifico', cursive;font-size:34px;letter-spacing:0.4px;color:#6a3a5a}
+    p.lead{margin:6px 0 0;color:var(--muted);font-size:15px}
+
+    .hero-illus{width:140px;height:140px;border-radius:24px;display:flex;align-items:center;justify-content:center}
+
+    /* floating hearts */
+    .heart{position:absolute;font-size:20px;opacity:0.95;transform-origin:center;animation:float calc(4s + var(--i)*0.6s) linear infinite}
+    @keyframes float{0%{transform:translateY(0) scale(1);opacity:1}100%{transform:translateY(-140px) scale(.7);opacity:0}}
+
+    /* sections */
+    section{margin-top:22px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
+    .card{background:rgba(255,255,255,0.7);border-radius:14px;padding:12px;border:1px solid rgba(255,255,255,0.6);box-shadow:var(--card-shadow);transition:transform .28s var(--soft), box-shadow .28s var(--soft)}
+    .card:hover{transform:translateY(-8px)}
+    .photo{height:110px;border-radius:12px;background:linear-gradient(135deg,var(--p3),var(--p2));display:flex;align-items:center;justify-content:center;font-weight:600;color:#5b3b57}
+    .caption{font-size:13px;margin-top:8px;color:var(--muted);text-align:center}
+
+    /* typewriter */
+    .note{background:linear-gradient(180deg,#ffffff, #fffaf6);padding:16px;border-radius:14px;border:1px dashed rgba(150,120,140,0.12)}
+    .type{font-family: 'Pacifico', cursive;font-size:18px;color:#6a3a5a;min-height:46px}
+
+    /* surprise button */
+    .btn{display:inline-block;padding:10px 16px;border-radius:999px;background:var(--accent);border:none;font-weight:600;cursor:pointer;box-shadow:0 6px 18px rgba(120,80,110,0.12);transition:transform .18s ease}
+    .btn:active{transform:scale(.98)}
+
+    .count{font-size:28px;font-weight:700;color:#6a3a5a}
+
+    footer{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-top:22px}
+
+    /* small micro interactions */
+    .sparkle{pointer-events:none;position:absolute;opacity:0;transform:scale(.6);transition:opacity .26s ease, transform .26s ease}
+
+    /* responsive tweaks */
+    @media (max-width:600px){body{padding:18px}.container{padding:18px}h1{font-size:26px}.avatar{width:96px;height:96px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <div class="heart" style="left:20%;bottom:24px;--i:0">💗</div>
+    <div class="heart" style="left:40%;bottom:12px;--i:1">💕</div>
+    <div class="heart" style="left:70%;bottom:20px;--i:2">🌸</div>
+
+    <header>
+      <div class="avatar">🥰</div>
+      <div class="title">
+        <h1>Happy Birthday, Sayangku!</h1>
+        <p class="lead">Semoga hari ini penuh tawa, kue, dan pelukan manis — dari aku 💕</p>
+      </div>
+      <div class="hero-illus" aria-hidden>
+        <!-- cute sticker area, replace with image if mau -->
+        <svg width="140" height="140" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <rect rx="20" width="200" height="200" fill="#fff0f4"/>
+          <g transform="translate(30,30)">
+            <circle cx="40" cy="40" r="36" fill="#ffd7e9"/>
+            <g transform="translate(16,16)">
+              <circle cx="24" cy="24" r="6" fill="#6a3a5a"/>
+              <circle cx="48" cy="24" r="6" fill="#6a3a5a"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </header>
+
+    <section aria-label="Gallery">
+      <h3 style="margin:0 0 8px 0;color:#6a3a5a">Kenangan Kita</h3>
+      <div class="cards">
+        <div class="card">
+          <div class="photo">Foto 1</div>
+          <div class="caption">Kencan di kafe itu, 2023</div>
+        </div>
+        <div class="card">
+          <div class="photo">Foto 2</div>
+          <div class="caption">Jalan-jalan hujan</div>
+        </div>
+        <div class="card">
+          <div class="photo">Foto 3</div>
+          <div class="caption">Momen silly bareng</div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Ucapan Spesial">
+      <h3 style="margin:18px 0 8px 0;color:#6a3a5a">Ucapan Spesial</h3>
+      <div class="note">
+        <div class="type" id="typewriter">Aku udah nyiapin 1 hari spesial buat kamu... </div>
+      </div>
+    </section>
+
+    <section aria-label="Surprise">
+      <div style="display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap">
+        <div>
+          <div class="count" id="count">0</div>
+          <div style="font-size:12px;color:var(--muted)">Hal yang aku sayang dari kamu</div>
+        </div>
+
+        <div style="margin-left:auto">
+          <button class="btn" id="surpriseBtn">Klik untuk dapat hadiah 🎁</button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Playlist" style="margin-top:18px">
+      <h3 style="margin:0 0 8px 0;color:#6a3a5a">Playlist Favoritmu</h3>
+      <div class="card" style="display:flex;align-items:center;gap:12px">
+        <div style="flex:1">
+          <div style="font-weight:600">Judul Lagu Favorit</div>
+          <div style="font-size:13px;color:var(--muted)">Ganti file audio di bawah dengan lagu favoritnya (file lokal atau URL)</div>
+        </div>
+        <div>
+          <!-- replace src with actual file e.g. "song.mp3" -->
+          <audio controls preload="none" id="audioPlayer">
+            <source src="" type="audio/mpeg">
+            Audio tidak tersedia. Silakan ganti atribut src ke file mp3.
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="font-size:14px;color:var(--muted)">Semoga ulang tahunmu penuh kebahagiaan 🩷</div>
+      <div>
+        <button class="btn" id="msgBtn">Aku Sayang Kamu 💗</button>
+      </div>
+    </footer>
+
+    <!-- hidden surprise modal -->
+    <div id="modal" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(30,12,25,0.45);z-index:40">
+      <div style="background:linear-gradient(180deg,#fff,#fff8fb);padding:20px;border-radius:18px;max-width:420px;width:92%;text-align:center;box-shadow:0 12px 40px rgba(90,55,75,0.18)">
+        <div style="font-size:20px;font-weight:700;color:#6a3a5a;margin-bottom:8px">Surprise! 🎉</div>
+        <p style="color:var(--muted);margin:0 0 12px">Selamat ultah sayangku, semoga hari ini dan seterusnya penuh cinta dan tawa. Klik tombol di bawah untuk pesan manis.</p>
+        <button class="btn" id="modalClose">Buka Pesan</button>
+      </div>
+    </div>
+
+    <!-- little sparkles container -->
+    <div id="sparkles"></div>
+
+  </div>
+
+  <script>
+    // typewriter text
+    const typeEl = document.getElementById('typewriter');
+    const text = "Aku sayang kamu lebih dari kata-kata. Terima kasih sudah jadi kamu — selalu ceria, selalu manis. Happy birthday!";
+    let idx = 0;
+    function type(){
+      if(idx < text.length){
+        typeEl.textContent += text[idx++];
+        setTimeout(type, 28 + Math.random()*30);
+      }
+    }
+    setTimeout(type, 700);
+
+    // count-up little animation
+    const countEl = document.getElementById('count');
+    let count = 0;
+    const target = 100; // playful number
+    function tick(){
+      if(count < target){
+        count += Math.ceil((target - count)/10);
+        countEl.textContent = count;
+        requestAnimationFrame(tick);
+      } else countEl.textContent = target + "+";
+    }
+    setTimeout(tick, 900);
+
+    // surprise modal
+    const surpriseBtn = document.getElementById('surpriseBtn');
+    const modal = document.getElementById('modal');
+    const modalClose = document.getElementById('modalClose');
+    surpriseBtn.addEventListener('click', ()=>{modal.style.display='flex';createSparkles(25)});
+    modalClose.addEventListener('click', ()=>{modal.style.display='none';
+      showMessage();
+    });
+
+    // message button
+    document.getElementById('msgBtn').addEventListener('click', ()=>{
+      showMessage();
+      createSparkles(18);
+    });
+
+    function showMessage(){
+      // gentle custom message
+      alert('Aku sayang kamu, selamat ulang tahun! 💖\nSemoga semua mimpi mu tercapai.');
+    }
+
+    // sparkles generator
+    function createSparkles(n){
+      const container = document.getElementById('sparkles');
+      for(let i=0;i<n;i++){
+        const s = document.createElement('div');
+        s.className='sparkle';
+        s.style.left = (10 + Math.random()*80) + '%';
+        s.style.top = (40 + Math.random()*40) + '%';
+        s.style.opacity = 1;
+        s.style.transform = 'scale('+ (0.8+Math.random()*0.7) +')';
+        s.textContent = ['✨','💗','🌸','🎀'][Math.floor(Math.random()*4)];
+        container.appendChild(s);
+        // animate
+        (function(el){
+          setTimeout(()=>{ el.style.opacity=0; el.style.transform='translateY(-80px) scale(.6)'; }, 20 + i*20);
+          setTimeout(()=>{ el.remove(); }, 1400 + Math.random()*800);
+        })(s);
+      }
+    }
+
+    // gentle floating hearts animation is purely CSS via .heart
+
+    // gallery hover: small sparkle when clicked
+    document.querySelectorAll('.card').forEach(c=>{
+      c.addEventListener('click', ()=>{
+        createSparkles(8);
+        // in real page, you'd open a lightbox or link to a larger photo
+      });
+    });
+
+    // accessibility: close modal on Escape
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') modal.style.display='none'});
+
+  </script>
+</body>
+</html>
